@@ -2,7 +2,49 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.egg-info/
+build/
+dist/
 venv/
+.venv/
+env/
 .env
-.venv
+
+# Streamlit
 .streamlit/secrets.toml
+
+# База данных
+# Локальная SQLite создаётся при запуске, в Git не нужна.
+# Схему храним в .sql-скриптах, а не в самом файле БД.
+*.db
+*.sqlite
+*.sqlite3
+
+# Модели
+# Веса YOLO тяжёлые (десятки–сотни МБ), в Git не место.
+*.pt
+*.pth
+*.onnx
+*.engine
+
+# Ultralytics создаёт runs/ и weights/ при predict/track — быстро разрастаются.
+runs/
+weights/
+
+# Кэши тестов и линтеров
+# Появится, когда начнёте писать тесты на pytest.
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# IDE и ОС
+# У каждого свои настройки IDE, коммитить их не надо.
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Логи
+*.log

@@ -1,0 +1,13 @@
+detection:
+  model_path: 'yolov8n.pt'
+  conf_threshold: 0.4
+  classes: ['person', 'helmet', 'vest']
+
+tracking:
+  overlap_threshold: 0.5
+
+database:
+  path: 'events.db'
+
+video:
+  output_dir: 'data/output'
